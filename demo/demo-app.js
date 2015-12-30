@@ -1,5 +1,5 @@
 (function(){
-    var app = angular.module( "demo-app", ["f48.AGRD"] );
+    var app = angular.module( "demo-app", ["angular-github-repo-display"] );
 
     app.config ( function( $routeProvider ) {
         $routeProvider.when ( "/", {

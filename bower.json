@@ -1,0 +1,30 @@
+{
+  "name": "angular-github-repo-display",
+  "version": "0.0.1",
+  "homepage": "https://github.com/forthright48/angular-github-repo-display",
+  "authors": [
+    "forthright48 <forthright48@gmail.com>"
+  ],
+  "description": "Display Github Repo files on a site using AngularJS.",
+  "main": "dist/angular-github-repo-display.js",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo",
+    "README.md",
+    ".git",
+    ".gitignore"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "jquery": "~2.1.4",
+    "MathJax": "~2.5.3",
+    "angular-marked": "~1.0.1"
+  }
+}

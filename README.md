@@ -13,7 +13,13 @@ Display files from a Github Repo on a site using AngularJS.
 
 First, download "angular-github-repo-display" and add it to your app.
 
-    angular.module( "your-app", ["f48-AGRD"] );
+**Warning**: AGRD depends on MathJax. Bower downloads around 50+ MB just for that :| So be a little bit patient.
+
+    bower install angular-github-repo-display
+
+Then add the module to your app.
+
+    angular.module( "your-app", ["angular-github-repo-display"] );
 
 ## Fixing Route
 
@@ -41,17 +47,6 @@ So what is happening? This directive is responsible for pulling files from githu
 
 For example, suppose we want to pull one of my other repo, then we put `git-link="forthright48/cpps101"`.
 
-## How to Render Latex?
+## Render Latex
 
-Github doesn't render latex, but can we? Yes. We can use MathJax. Just add this at the end of your html.
-
-    <!-- MathJAX -->
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                processEscapes: true
-            }
-        });
-    </script>
+AGRD uses MathJax to render latex. So just wrap your latex with $ sign. If you want to use $ sign literally, then you must delimit it by writing \\$.
