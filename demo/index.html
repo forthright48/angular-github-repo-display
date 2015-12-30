@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="demo-app">
+<head>
+    <meta charset="utf-8">
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <title>Demo for Angular-Github-Repo-Display</title>
+</head>
+<body>
+
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+
+    <!-- JavaScript -->
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+    <script src="demo-app.js"></script>
+
+    <!-- Templates -->
+    <script type="text/ng-template" id="home.html">
+
+    <h1>Angular-Github-Repo-Display</h1>
+
+    <p>Note that I am using scripts for templates, otherwise I would need to use a server. Look at the end of body in html for these templates.</p>
+
+    <p>We are going to display files from a Github Repo. I am choosing this one: <a href="https://github.com/forthright48/cpps101">CPPS 101</a></p>
+
+    <div>
+        <button>Click Here</button>
+    </div>
+
+    </script>
+
+</body>
+</html>
