@@ -16,24 +16,54 @@
 
     <!-- JavaScript -->
     <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="https://cdn.rawgit.com/chjj/marked/master/lib/marked.js"></script>
+    <script src="https://cdn.rawgit.com/Hypercubed/angular-marked/master/dist/angular-marked.min.js"></script>
 
+
+    <script src="angular-github-repo-display.js"></script>
     <script src="demo-app.js"></script>
 
     <!-- Templates -->
     <script type="text/ng-template" id="home.html">
 
-    <h1>Angular-Github-Repo-Display</h1>
+        <h1>Angular-Github-Repo-Display</h1>
 
-    <p>Note that I am using scripts for templates, otherwise I would need to use a server. Look at the end of body in html for these templates.</p>
+        <p>Note that I am using scripts for templates, otherwise I would need to use a server. Look at the end of body in html for these templates.</p>
 
-    <p>We are going to display files from a Github Repo. I am choosing this one: <a href="https://github.com/forthright48/cpps101">CPPS 101</a></p>
+        <p>We are going to display files from a Github Repo. I am choosing this one: <a href="https://github.com/forthright48/cpps101">CPPS 101</a></p>
 
-    <div>
-        <button>Click Here</button>
-    </div>
+        <div>
+            <a class="btn btn-primary" href="#/someExampleRoute/README.md">Click Here</a>
+        </div>
 
+    </script>
+
+    <script type="text/ng-template" id="mymod.html">
+        <h1>Inside My Mod</h1>
+        <p>We can write other stuffs here.</p>
+
+        <p>For github files, we next include a directive in this template. The directive displays file according to route path.</p>
+
+        <div class="markdown-body">
+            <github-repo git-link="forthright48/cpps101"></github-repo>
+        </div>
+
+
+    </script>
+
+
+    <!-- MathJAX -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            }
+        });
     </script>
 
 </body>
