@@ -1,15 +1,18 @@
-# Not Ready Yet. Wait few more days.
-
 # Angular Github Repo Display (AGRD)
 
 Display files from a Github Repo on a site using AngularJS.
 
 ### Currently can display markdown files only
 
+# Features
+
+- Display markdown files pulled from github repo.
+- Supports latex render using MathJax.
+- Support relative links in markdown file.
 
 # How to Use it
 
-## Dependencies
+## Installation
 
 First, download "angular-github-repo-display" and add it to your app.
 
