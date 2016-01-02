@@ -1,6 +1,6 @@
 (function(){
     angular.module ( "angular-github-repo-display", ["ngRoute", "hc.marked"] )
-    .directive( "githubRepo", function( $compile, $timeout ){
+    .directive( "githubRepo", function( $compile ){
         return {
             restrict: "E",
             controller: function( $attrs, $routeParams, $http, $location, marked ) {
@@ -9,14 +9,12 @@
                 ///Use this git link to extract the file mentioned in path
                 var filePath = $routeParams.filePath;
                 var base = "#" + $location.path().substring ( 0, $location.path().lastIndexOf("/"));
-                console.log(base);
 
                 // Build github api link
                 var link = "";
                 link = "https://api.github.com/repos/" + $attrs.gitLink + "/contents/" + filePath;
 
 
-                console.log(link);
                 // Call github api for content
                 $http.get ( link ).then ( function(res){
                     vm.data = addBaseLink ( marked ( atob ( res.data.content ) ), base );
@@ -50,7 +48,7 @@
             controllerAs: "git",
             bindToController: true,
             link: function ( scope, ele, attrs, ctrl ) {
-
+                
                 // Watch git.data as it gets changed by api call to github
                 scope.$watch ( "git.data", function ( newVal, oldVal ) {
                     // Add the github data to github-repo element

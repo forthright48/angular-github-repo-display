@@ -24,6 +24,30 @@ Then add the module to your app.
 
     angular.module( "your-app", ["angular-github-repo-display"] );
 
+## Render Latex
+
+We want to render latex so we have to add MathJax and configure it.
+
+Add these scripts at the end of your html file.
+
+```
+<!-- MathJax Configuration -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+```
+
+After that, wrap your latex with $ signs. To use them literally, delimit them as /$.
+
 ## Fixing Route
 
 Decide, on which route you want to display the github repo. Suppose, you decided, it will be on the following route:
@@ -49,7 +73,3 @@ Add this directive in your SpecialTemplate view:
 So what is happening? This directive is responsible for pulling files from github using API. But how is it going to know which repo to pull? Notice the "git-link" attribute there? That's what points to the git repo we want to pull.
 
 For example, suppose we want to pull one of my other repo, then we put `git-link="forthright48/cpps101"`.
-
-## Render Latex
-
-AGRD uses MathJax to render latex. So just wrap your latex with $ sign. If you want to use $ sign literally, then you must delimit it by writing \\$.

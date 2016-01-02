@@ -1,6 +1,6 @@
 {
   "name": "angular-github-repo-display",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/forthright48/angular-github-repo-display",
   "authors": [
     "forthright48 <forthright48@gmail.com>"
@@ -24,7 +24,6 @@
     "angular": "~1.4.8",
     "angular-route": "~1.4.8",
     "jquery": "~2.1.4",
-    "MathJax": "~2.5.3",
     "angular-marked": "~1.0.1"
   }
 }
