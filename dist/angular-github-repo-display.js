@@ -48,7 +48,7 @@
             controllerAs: "git",
             bindToController: true,
             link: function ( scope, ele, attrs, ctrl ) {
-                
+
                 // Watch git.data as it gets changed by api call to github
                 scope.$watch ( "git.data", function ( newVal, oldVal ) {
                     // Add the github data to github-repo element
@@ -57,14 +57,6 @@
                     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
                 });
             }
-        }
-    });
-
-    // MathJax Configuration
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            processEscapes: true
         }
     });
 })();
