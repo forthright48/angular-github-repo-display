@@ -22,7 +22,6 @@
                     console.log(err);
                 });
 
-
                 /*******************Implementaion**********************/
 
                 function addBaseLink( html, base ) {
