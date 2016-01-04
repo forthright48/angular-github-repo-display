@@ -19,6 +19,7 @@
                 $http.get ( link ).then ( function(res){
                     vm.data = addBaseLink ( marked ( atob ( res.data.content ) ), base );
                 }, function ( err ) {
+                    vm.data = "<div class='text-danger text-center'><h1>Githup API Call Rate Limit is Probably Hit</h1><h2>Please, wait for a while.</h2></div>"
                     console.log(err);
                 });
 
